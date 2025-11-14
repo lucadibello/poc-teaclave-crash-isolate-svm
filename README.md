@@ -16,7 +16,7 @@ Trigger the full set of enclave lifecycle scenarios with:
 make run-local
 ```
 
-The run spins up the topology once and executes four deterministic experiments before the crash occurs. Each experiment logs thread IDs for enclave creation, service invocation, and destruction so that thread-affinity issues are easy to spot.
+The run executes the enclave-backed program once and runs four deterministic experiments before the crash occurs. Each experiment logs thread IDs for enclave creation, service invocation, and destruction so that thread-affinity issues are easy to spot.
 
 ### Test Matrix
 
