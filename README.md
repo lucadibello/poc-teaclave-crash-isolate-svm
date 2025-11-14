@@ -61,4 +61,4 @@ com.oracle.svm.core.thread.VMThreads.detachAllThreadsExceptCurrentWithoutCleanup
 ## References
 
 - Teaclave host SDK internals: inspect `org.apache.teaclave.javasdk.host.TeeSdkEnclave` inside `tools/javaenclave/jar/sdk/host/host-0.1.0.jar`.
-- Crash logs from the local harness (see `make run-local` output) provide reproducible evidence for thesis documentation.
+- Crash logs from the local harness (see `make run-local` output OR find [here](assets/crash.log) a sample crash output) provide reproducible evidence for thesis documentation.
