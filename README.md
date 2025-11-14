@@ -1,22 +1,22 @@
 # Teaclave Enclave Crash Triage
 
-Crash triage harness for exercising Apache Teaclave TEE SDK enclaves under different thread-affinity scenarios.
+Small self-contained program that shows the Apache Teaclave TEE SDK crashing when an enclave is destroyed from the wrong Java thread.
 
 ## Overview
 
-- Designed to isolate and document a `StackOverflowError` that occurs when tearing down a Teaclave Substrate VM enclave from a thread other than the one that created it.
-- Provides a minimal local workload (`SimpleService`) that reliably reproduces the failure for further analysis or thesis citation.
-- All commands run inside the repository root; no external services are required.
+- Demonstrates the `StackOverflowError` thrown by the Teaclave Substrate VM when teardown happens on a thread that did not create the enclave.
+- Uses a lightweight `SimpleService` so the crash can be reproduced quickly and cited later.
+- Everything runs locally; clone the repo and execute the provided make target.
 
 ## Local Tests
 
-Trigger the full set of enclave lifecycle scenarios with:
+Trigger the enclave lifecycle experiments with:
 
 ```bash
 make run-local
 ```
 
-The run executes the enclave-backed program once and runs four deterministic experiments before the crash occurs. Each experiment logs thread IDs for enclave creation, service invocation, and destruction so that thread-affinity issues are easy to spot.
+The command runs the enclave-backed program once and walks through four deterministic experiments before the crash occurs. Each experiment logs thread IDs for enclave creation, service calls, and destruction so thread-affinity issues are easy to spot.
 
 ### Test Matrix
 
