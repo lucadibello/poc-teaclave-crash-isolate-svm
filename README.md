@@ -1,4 +1,4 @@
-# teaclave-storm
+# Teaclave Enclave Crash Triage
 
 Crash triage harness for exercising Apache Teaclave TEE SDK enclaves under different thread-affinity scenarios.
 
